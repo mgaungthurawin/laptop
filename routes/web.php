@@ -15,6 +15,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('/branches/{id}', 'WelcomeController@branches');
 Route::get('/branches', 'WelcomeController@allbranches');
 Route::get('/product/{id}', 'ProductController@products');
+Route::get('/productbrand/{brand}', 'ProductController@productbrand');
 Route::get('/products', 'ProductController@allproducts');
 Route::get('/single/{id}', 'ProductController@single');
 

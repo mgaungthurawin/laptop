@@ -85,8 +85,10 @@ class ItemController extends Controller
             Flash::error('Item not found');
             return redirect(route('item.index'));
         }
-
-        return view('admin.item.edit', compact('shops', 'branches', 'item'));
+        $shopArr[] = $item->shop_id;
+        $brandArr[] = $item->brand;
+        $branchArr[] = $item->branch_id;
+        return view('admin.item.edit', compact('shops', 'branches', 'item', 'shopArr', 'branchArr', 'brandArr'));
     }
 
     /**

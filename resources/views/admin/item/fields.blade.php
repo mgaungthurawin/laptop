@@ -60,6 +60,36 @@
 </div>
 
 <div class="form-group col-sm-6">
+    {!! Form::label('camera', 'Camera:') !!}
+    {!! Form::text('camera', null, ['class' => 'form-control']) !!}
+    @if ($errors->has('camera'))
+        <span class="text-danger">
+            <strong>{{ $errors->first('camera') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group col-sm-6">
+    {!! Form::label('vga', 'VGA:') !!}
+    {!! Form::text('vga', null, ['class' => 'form-control']) !!}
+    @if ($errors->has('vga'))
+        <span class="text-danger">
+            <strong>{{ $errors->first('vga') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group col-sm-6">
+    {!! Form::label('color', 'Color:') !!}
+    {!! Form::text('color', null, ['class' => 'form-control']) !!}
+    @if ($errors->has('color'))
+        <span class="text-danger">
+            <strong>{{ $errors->first('color') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group col-sm-6">
     {!! Form::label('battery', 'Battery:') !!}
     {!! Form::text('battery', null, ['class' => 'form-control']) !!}
     @if ($errors->has('battery'))

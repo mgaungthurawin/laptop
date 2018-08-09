@@ -23,3 +23,6 @@ class WelcomeController extends Controller
     	return view('branches', compact('branches'));	
     }
 }
+
+
+

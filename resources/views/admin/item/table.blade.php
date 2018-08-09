@@ -7,6 +7,9 @@
         <th>Memory</th>
         <th>Hardisk</th>
         <th>Display</th>
+        <th>Camera</th>
+        <th>VGA</th>
+        <th>Color</th>
         <th>Battery</th>
         <th colspan="3">Action</th>
     </thead>
@@ -20,6 +23,9 @@
             <td>{!! $item->memory !!}</td>
             <td>{!! $item->hardisk !!}</td>
             <td>{!! $item->display !!}</td>
+            <td>{!! $item->camera !!}</td>
+            <td>{!! $item->vga !!}</td>
+            <td>{!! $item->color !!}</td>
             <td>{!! $item->battery !!}</td>
             <td>
                 {!! Form::open(['route' => ['item.destroy', $item->id], 'method' => 'delete']) !!}

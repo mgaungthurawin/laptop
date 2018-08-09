@@ -18,7 +18,11 @@
                         {!! Form::label('shopid', 'Shop') !!}
                         <select id="shop_id" name="shop_id" class="form-control">
                             @foreach ($shops as $shop)
-                                <option value="{{ $shop->id }}">{{ $shop->name}}</option>
+                                <option value="{{ $shop->id }}"
+                                @if(in_array($shop->id, $shopArr))
+                                selected
+                                @endif
+                                >{{ $shop->name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -27,7 +31,11 @@
                         {!! Form::label('shopid', 'Branch') !!}
                         <select id="branch_id" name="branch_id" class="form-control">
                             @foreach ($branches as $branch)
-                                <option value="{{ $branch->id }}">{{ $branch->location}}</option>
+                                <option value="{{ $branch->id }}"
+                                @if(in_array($branch->id, $branchArr))
+                                selected
+                                @endif
+                                >{{ $branch->location}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -36,14 +44,18 @@
                         {!! Form::label('brand', 'Brand') !!}
                         <select id="brand" name="brand" class="form-control">
                             @foreach (config('brand.brand') as $brand)
-                                <option value="{{ $brand }}">{{ $brand}}</option>
+                                <option value="{{ $brand }}"
+                                    @if(in_array($brand, $brandArr))
+                                    selected
+                                    @endif 
+                                >{{ $brand}}</option>
                             @endforeach
                         </select>
                     </div>
 
                     @include('admin.item.fields')
 
-                    <input type="text" name="img" value="{{ $item->image }}">
+                    <input type="hidden" name="img" value="{{ $item->image }}">
 
                     <div class="form-group col-sm-12">
                        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}

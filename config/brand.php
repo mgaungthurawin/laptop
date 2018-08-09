@@ -7,10 +7,16 @@ return [
         'Asus',
         'Dell',
         'Acer',
-        'Samsung',
         'MSI',
         'Fujitsu',
         'Hp',
+        'Samsung',
+        'Xiaomi',
+        'Huawei',
+        'Vivo',
+        'Oppo',
+        'Apple',
+        'Other'
     ]
 
 ];
