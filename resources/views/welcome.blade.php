@@ -31,7 +31,7 @@
     <br/>
     <div class="col text-center">
         <div class="section_title">
-            <h2>Mian Shops</h2>
+            <h2>Main Shops</h2>
         </div>
     </div>
     <br/>
