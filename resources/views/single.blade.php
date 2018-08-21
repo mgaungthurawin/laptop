@@ -128,8 +128,23 @@
 				</div>
 			</div>
 		</div>
-
+		<h3>Related Products</h3>
+		<div class="row">
+			@foreach($relateds as $relead)
+				<div class="col-sm-4">
+					<img src="{{ asset($relead->image) }}" alt="">
+					<div class="product_info">
+						<h6 class="product_name" style="text-align: center;"><a href="{{ url('/single/'.$relead->id) }}">{{ $relead->brand }}</a></h6>
+						<center>
+							<div class="product_price">${{$relead->price}}</div>
+						</center>
+					</div>
+				</div>
+			@endforeach
+		</div>
 	</div>
+
+		
 
 	@include('benefit')
 

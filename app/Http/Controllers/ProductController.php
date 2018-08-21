@@ -21,7 +21,10 @@ class ProductController extends Controller
 
     public function single($id) {
     	$item = Item::find($id);
-    	return view('single', compact('item'));
+        $branch_id = Session::get('branch_id');
+        $relateds = Item::where('brand', $item->brand)
+                        ->where('branch_id', $branch_id)->get();
+    	return view('single', compact('item', 'relateds'));
     }
 
     public function productbrand($brand) {

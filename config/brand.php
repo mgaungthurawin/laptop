@@ -16,6 +16,8 @@ return [
         'Vivo',
         'Oppo',
         'Apple',
+        'Canon',
+        'Fuji Xerox',
         'Other'
     ]
 
